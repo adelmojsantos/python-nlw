@@ -1,0 +1,94 @@
+[
+  {
+    "label": "Blueprint",
+    "importPath": "flask",
+    "description": "flask",
+    "isExtraImport": true,
+    "detail": "flask",
+    "documentation": {}
+  },
+  {
+    "label": "Flask",
+    "importPath": "flask",
+    "description": "flask",
+    "isExtraImport": true,
+    "detail": "flask",
+    "documentation": {}
+  },
+  {
+    "label": "Flask",
+    "importPath": "flask",
+    "description": "flask",
+    "isExtraImport": true,
+    "detail": "flask",
+    "documentation": {}
+  },
+  {
+    "label": "request",
+    "importPath": "flask",
+    "description": "flask",
+    "isExtraImport": true,
+    "detail": "flask",
+    "documentation": {}
+  },
+  {
+    "label": "jsonify",
+    "importPath": "flask",
+    "description": "flask",
+    "isExtraImport": true,
+    "detail": "flask",
+    "documentation": {}
+  },
+  {
+    "label": "Code128",
+    "importPath": "barcode",
+    "description": "barcode",
+    "isExtraImport": true,
+    "detail": "barcode",
+    "documentation": {}
+  },
+  {
+    "label": "ImageWriter",
+    "importPath": "barcode.writer",
+    "description": "barcode.writer",
+    "isExtraImport": true,
+    "detail": "barcode.writer",
+    "documentation": {}
+  },
+  {
+    "label": "create_tags",
+    "kind": 2,
+    "importPath": "src.main.routes.tag_routes",
+    "description": "src.main.routes.tag_routes",
+    "peekOfCode": "def create_tags():\n    pass",
+    "detail": "src.main.routes.tag_routes",
+    "documentation": {}
+  },
+  {
+    "label": "tags_routes_bp",
+    "kind": 5,
+    "importPath": "src.main.routes.tag_routes",
+    "description": "src.main.routes.tag_routes",
+    "peekOfCode": "tags_routes_bp = Blueprint(\"tags_routes\", __name__)\n@tags_routes_bp.route(\"create_tag\", methods=[\"POST\"])\ndef create_tags():\n    pass",
+    "detail": "src.main.routes.tag_routes",
+    "documentation": {}
+  },
+  {
+    "label": "app",
+    "kind": 5,
+    "importPath": "src.main.server.server",
+    "description": "src.main.server.server",
+    "peekOfCode": "app = Flask(__name__)",
+    "detail": "src.main.server.server",
+    "documentation": {}
+  },
+  {
+    "label": "create_tag",
+    "kind": 2,
+    "importPath": "run_raw",
+    "description": "run_raw",
+    "peekOfCode": "def create_tag():\n    body = request.json\n    product_code = body.get(\"product_code\")\n    tag = Code128(product_code, writer=ImageWriter())\n    path_from_tag = f\"{tag}\"\n    tag.save(path_from_tag)\n    return jsonify({\"tag path\": path_from_tag})\nif __name__ == \"__main__\":\n    app.run(host=\"0.0.0.0\", port=3000)",
+    "detail": "run_raw",
+    "documentation": {}
+  }
+]
